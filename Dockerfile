@@ -4,6 +4,6 @@ FROM gcc:4.9
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
-WORKDIR ${ISC_PACKAGE_INSTALLDIR}/dev
+WORKDIR /usr/irissys/dev
 
-COPY --from=0 ${ISC_PACKAGE_INSTALLDIR}/dev/iris-callin ${ISC_PACKAGE_INSTALLDIR}/dev/iris-callin
+COPY --from=0 /usr/irissys/dev/iris-callin /usr/irissys/dev/iris-callin
