@@ -1,3 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-docker build -t intersystemsdc/irisdemo-base-gcc:latest .
+set -e
+
+DOCKER_REPO=intersystemsdc/irisdemo-base-gcc
+VERSION=`cat ./VERSION`
+
+docker build -t ${DOCKER_REPO}:version-${VERSION} .
